@@ -16,11 +16,12 @@ def mytrapz(a,b,dx):
 
 exact = 32/3
 numerical = mytrapz(0,4,0.2)
+print("Integral with mytrapz is",numerical)
 fractionalerror = abs(numerical-exact)/exact
 print("The fractional error is",fractionalerror)
-xarray = np.linspace(0,4,21)
-for i in range(1,21):
-    yarray = integrand(xarray[i])
+xarray = np.arange(0,4,0.2)
+yarray=integrand(xarray)
 withtrapz = np.trapz(yarray,xarray)
+print("Integral with np.trapz is",withtrapz)
 discrepancy = abs(numerical-withtrapz)/withtrapz
-print("Fractional discrapancy with trapz is",discrepancy)
+print("Fractional discrepancy with trapz is",discrepancy)
