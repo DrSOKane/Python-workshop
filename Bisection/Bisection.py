@@ -1,4 +1,4 @@
-define Bisection(lowerbound,upperbound,tolerance):
+def Bisection(lowerbound,upperbound,tolerance):
     upper=upperbound
     lower=lowerbound
     halfway=(upperbound-lowerbound)/2
